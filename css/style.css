@@ -1,0 +1,243 @@
+/* —————————— БАЗОВІ СТИЛІ —————————— */
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
+  background-color: #f5f7fb;
+  color: #111827;
+}
+
+/* контейнер */
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* —————————— ШАПКА —————————— */
+
+header {
+  background-color: #1d3557;
+  color: #fff;
+  padding: 24px 0 28px;
+  text-align: center;
+  margin-bottom: 20px; /* менше повітря під шапкою */
+}
+
+.info__place {
+  font-size: 22px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.info__title {
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.info__subtitle {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 18px;
+}
+
+/* — акцентний текст */
+.yellow-text {
+  color: #e63946;
+}
+
+/* — блок з даними студента */
+
+.infobox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px; /* трохи менший відступ */
+}
+
+.info__name,
+.info__group {
+  font-weight: 500;
+}
+
+.info__name span,
+.info__group span {
+  font-weight: 700;
+}
+
+/* — ім’я без аватара */
+
+.info__name-link {
+  font-weight: 600;
+  border-bottom: 2px solid #e63946;
+}
+
+.info__name-link:hover {
+  color: #e63946;
+}
+
+/* —————————— НАВІГАЦІЯ ЛАБОРАТОРНИХ —————————— */
+
+.lab-works {
+  margin: 16px 0 24px; /* зменшив верх/низ */
+}
+
+.lab-works__list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;          /* кнопки ближче одна до одної */
+  flex-wrap: wrap;
+}
+
+.lab-works__item {
+  background-color: #1d3557;
+  max-width: 180px;
+  border-radius: 140px;
+  text-align: center;
+  border: 2px solid #1d3557;
+  transition: all 0.3s ease;
+}
+
+.lab-works__link {
+  color: #f1faee;
+  font-weight: 500;
+  font-size: 15px;
+  display: block;
+  padding: 10px 22px;
+}
+
+.active {
+  border: 2px dashed #1d3557 !important;
+}
+
+.active,
+.lab-works__item:hover,
+.lab-description__item:hover {
+  background-color: #e63946 !important;
+}
+
+.active .lab-works__link,
+.lab-works__item:hover .lab-works__link {
+  color: #fff !important;
+  font-weight: 700 !important;
+}
+
+/* —————————— ОБГОРТКА КОНТЕНТУ —————————— */
+
+.main {
+  padding-bottom: 40px;
+}
+
+.lab-description {
+  margin-bottom: 32px;
+}
+
+.lab-description__wrapper {
+  display: grid;
+  grid-template-columns: 300px minmax(0, 1fr);
+  gap: 32px;                 /* менший відступ між колонками */
+  align-items: flex-start;
+}
+
+/* —————————— ЛІВЕ МЕНЮ —————————— */
+
+.lab-description__list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;                  /* менші проміжки між пунктами */
+}
+
+.lab-description__item {
+  background-color: #1d3557;
+  border-radius: 20px;
+  max-width: 300px;
+  border: 2px solid #1d3557;
+  transition: all 0.3s ease;
+}
+
+.lab-description__link {
+  color: #fff;
+  display: block;
+  padding: 12px 16px;
+  font-size: 15px;
+}
+
+.short {
+  margin-left: 32px;
+}
+
+/* —————————— ТЕКСТОВИЙ БЛОК —————————— */
+
+.lab-description__text {
+  background-color: #f1faee;
+  border: 2px solid #e63946;
+  border-radius: 20px 0 0 20px;
+  padding: 24px 28px;        /* менший внутрішній відступ */
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: justify;
+  max-height: 720px;         /* трохи нижче, щоб не тягнулося до самого низу */
+  overflow: auto;
+  font-weight: 500;
+}
+
+.lab-description__text span {
+  font-weight: 700;
+}
+
+.lab-description__text p {
+  margin-bottom: 12px;       /* щільніший текст */
+}
+
+.description__text-topic {
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* —————————— ПОСИЛАННЯ —————————— */
+
+.description__text-links {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+
+.description__text-link {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: underline;
+}
+
+.description__text-link:hover {
+  color: #1d3557;
+}
+
+.description__text-icon {
+  width: 20px;
+}
+
+/* —————————— ПРИКЛАДИ КОДУ / СКРІНИ —————————— */
+
+pre {
+  font-size: 13px;
+  margin-bottom: 16px;
+  border-radius: 12px;
+  padding: 10px 12px;
+}
+
+.example {
+  background-color: #e0e4e8;
+}
+
+.screenshot {
+  border: 2px solid #1d3557;
+  margin-bottom: 16px;
+}

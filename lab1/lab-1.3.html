@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="../img/favicon.png" type="image/x-icon" />
+  <link rel="icon" href="../img/favicon.png" type="image/x-icon" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/normalize.css" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <title>Лабораторна робота №1 — Структура документа</title>
+</head>
+<body>
+  <div class="wrapper">
+    <header>
+      <div class="container">
+        <div class="info">
+          <h2 class="info__place">НТУУ «КПІ ім. Ігоря Сікорського»</h2>
+          <a href="../index.html">
+            <h1 class="info__title">ЗВІТИ З ЛАБОРАТОРНИХ РОБІТ</h1>
+          </a>
+          <h2 class="info__subtitle">
+            З ДИСЦИПЛІНИ
+            <span class="yellow-text">«WEB-ОРІЄНТОВНІ ТЕХНОЛОГІЇ. FRONTEND РОЗРОБКИ»</span>
+          </h2>
+          <div class="infobox">
+            <p class="info__name">
+              <span class="yellow-text">Студент: </span>
+              <a href="#" class="info__name-link">Богуславець Іван Євгенович</a>
+            </p>
+            <p class="info__group">
+              <span class="yellow-text">Група: </span>
+              ІО-35
+            </p>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+      <section class="lab-works">
+        <div class="container">
+          <ul class="lab-works__list">
+            <li class="lab-works__item active">
+              <a href="../lab1/lab-1.1.html" class="lab-works__link">Лабораторна робота №1</a>
+            </li>
+            <li class="lab-works__item">
+              <a href="../lab2/lab-2.1.html" class="lab-works__link">Лабораторна робота №2</a>
+            </li>
+            <li class="lab-works__item">
+              <a href="../lab3/lab-3.1.html" class="lab-works__link">Лабораторна робота №3</a>
+            </li>
+            <li class="lab-works__item">
+              <a href="../lab4/lab-4.1.html" class="lab-works__link">Лабораторна робота №4</a>
+            </li>
+            <li class="lab-works__item">
+              <a href="../lab5/lab-5.1.html" class="lab-works__link">Лабораторна робота №5</a>
+            </li>
+            <li class="lab-works__item">
+              <a href="../lab6/lab-6.1.html" class="lab-works__link">Лабораторна робота №6</a>
+            </li>
+            <li class="lab-works__item">
+              <a href="../lab7/lab-7.1.html" class="lab-works__link">Лабораторна робота №7</a>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="lab-description">
+        <div class="container">
+          <div class="lab-description__wrapper">
+            <aside class="lab-description__aside">
+              <ul class="lab-description__list">
+                <li class="lab-description__item">
+                  <a href="../lab1/lab-1.1.html" class="lab-description__link">Опис предметного середовища</a>
+                </li>
+                <li class="lab-description__item">
+                  <a href="../lab1/lab-1.2.html" class="lab-description__link">
+                    Тема, мета, місце розташування лабораторної роботи №1
+                  </a>
+                </li>
+                <li class="lab-description__item active">
+                  <a href="../lab1/lab-1.3.html" class="lab-description__link">СТРУКТУРА ДОКУМЕНТА</a>
+                </li>
+                <li class="lab-description__item short">
+                  <a href="../lab1/lab-1.4.html" class="lab-description__link">HTML-код таблиць</a>
+                </li>
+                <li class="lab-description__item short">
+                  <a href="../lab1/lab-1.5.html" class="lab-description__link">HTML-код форми</a>
+                </li>
+                <li class="lab-description__item short">
+                  <a href="../lab1/lab-1.6.html" class="lab-description__link">HTML-код зображення</a>
+                </li>
+                <li class="lab-description__item">
+                  <a href="../lab1/lab-1.7.html" class="lab-description__link">Висновки</a>
+                </li>
+              </ul>
+            </aside>
+
+            <div class="lab-description__text">
+              <p>
+                Звіт містить структуру HTML-документа для основних сторінок мого
+                вебзастосунку готелю «Hotel Comfort». Нижче наведено спрощений
+                HTML-код, який відображає основні елементи сторінок.
+              </p>
+
+              <p><span>1. Структура сторінки «index.html» (головна сторінка готелю):</span></p>
+              <pre class="example">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="uk"&gt;
+&lt;head&gt;
+  &lt;meta charset="utf-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;Hotel Comfort — готель, де комфорт поєднується зі стилем&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;header&gt;
+    &lt;div&gt;IB&lt;/div&gt;
+    &lt;nav aria-label="Головна навігація"&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href="#hero"&gt;Головна&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#rooms"&gt;Номери&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#restaurant"&gt;Ресторан&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#spa"&gt;SPA&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#gallery"&gt;Галерея&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#contacts"&gt;Контакти&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="about.html"&gt;Про проєкт (опис предметної галузі)&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/nav&gt;
+    &lt;a href="tel:+380638384111"&gt;+38 (063) 838-41-11&lt;/a&gt;
+  &lt;/header&gt;
+
+  &lt;main&gt;
+    &lt;section id="hero"&gt;
+      &lt;h1&gt;Готель, де комфорт поєднується зі стилем&lt;/h1&gt;
+      &lt;img src="public/background.png" alt="Номер готелю з великим ліжком"&gt;
+    &lt;/section&gt;
+
+    &lt;section id="booking"&gt;
+      &lt;h2&gt;Знайти номер&lt;/h2&gt;
+      &lt;form action="#" method="get"&gt;
+        ...
+      &lt;/form&gt;
+    &lt;/section&gt;
+
+    &lt;section id="about"&gt;
+      &lt;h2&gt;Більше, ніж просто готель&lt;/h2&gt;
+      &lt;p&gt;... опис готелю ...&lt;/p&gt;
+      &lt;ul&gt;... переваги готелю ...&lt;/ul&gt;
+      &lt;ol&gt;... кроки бронювання ...&lt;/ol&gt;
+      &lt;figure&gt;... зображення ресторану ...&lt;/figure&gt;
+    &lt;/section&gt;
+
+    &lt;section id="rooms"&gt;
+      &lt;h2&gt;Ідеальний простір для відпочинку&lt;/h2&gt;
+      &lt;table&gt;... таблиця тарифів номерів ...&lt;/table&gt;
+      &lt;article&gt;... номер «Орія» ...&lt;/article&gt;
+      &lt;article&gt;... номер «Луна» ...&lt;/article&gt;
+      &lt;article&gt;... номер «Аврора» ...&lt;/article&gt;
+      &lt;article&gt;... номер «Верона» ...&lt;/article&gt;
+    &lt;/section&gt;
+
+    &lt;section id="restaurant"&gt;...&lt;/section&gt;
+    &lt;section id="spa"&gt;...&lt;/section&gt;
+    &lt;section id="gallery"&gt;...&lt;/section&gt;
+
+    &lt;section id="contacts"&gt;
+      &lt;h2&gt;Контакти&lt;/h2&gt;
+      &lt;address&gt;... адреса, телефон, email ...&lt;/address&gt;
+      &lt;form action="#" method="post"&gt;... форма зворотного зв’язку ...&lt;/form&gt;
+    &lt;/section&gt;
+  &lt;/main&gt;
+
+  &lt;footer&gt;
+    &lt;p&gt;© 2025 Hotel Comfort&lt;/p&gt;
+    &lt;nav aria-label="Сервісні посилання"&gt;
+      &lt;a href="about.html"&gt;Про проєкт (опис предметної галузі)&lt;/a&gt;
+    &lt;/nav&gt;
+  &lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+              <p><span>2. Структура сторінки «about.html» (опис предметної галузі):</span></p>
+              <pre class="example">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="uk"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;Hotel Comfort — опис предметної галузі&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Hotel Comfort — опис предметної галузі&lt;/h1&gt;
+  &lt;p&gt;Сайт готелю для ознайомлення з послугами, номерами, контактами та бронюванням.&lt;/p&gt;
+
+  &lt;h2&gt;Бізнес-логіка (скорочено)&lt;/h2&gt;
+  &lt;ul&gt;
+    &lt;li&gt;Перегляд категорій номерів і тарифів.&lt;/li&gt;
+    &lt;li&gt;Пошук/бронювання за датами та кількістю гостей.&lt;/li&gt;
+    &lt;li&gt;Контакти й зворотний зв’язок.&lt;/li&gt;
+  &lt;/ul&gt;
+
+  &lt;h2&gt;Функціональні вимоги&lt;/h2&gt;
+  &lt;ol&gt;
+    &lt;li&gt;Заголовки різних рівнів на головній сторінці.&lt;/li&gt;
+    &lt;li&gt;Зображення номерів та зон готелю.&lt;/li&gt;
+    &lt;li&gt;Таблиця тарифів.&lt;/li&gt;
+    &lt;li&gt;Списки (ul та ol).&lt;/li&gt;
+    &lt;li&gt;Форми пошуку номера та зворотного зв’язку.&lt;/li&gt;
+  &lt;/ol&gt;
+
+  &lt;h2&gt;Нефункціональні вимоги&lt;/h2&gt;
+  &lt;ul&gt;
+    &lt;li&gt;HTML5, сучасні браузери.&lt;/li&gt;
+    &lt;li&gt;Репозиторій GitHub, публікація на GitHub Pages.&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

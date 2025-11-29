@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="../img/favicon.png" type="image/x-icon" />
+  <link rel="icon" href="../img/favicon.png" type="image/x-icon" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/normalize.css" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <title>Лабораторна робота №1 — HTML-код форми</title>
+</head>
+<body>
+  <div class="wrapper">
+    <header>
+      <div class="container">
+        <div class="info">
+          <h2 class="info__place">НТУУ «КПІ ім. Ігоря Сікорського»</h2>
+          <a href="../index.html">
+            <h1 class="info__title">ЗВІТИ З ЛАБОРАТОРНИХ РОБІТ</h1>
+          </a>
+          <h2 class="info__subtitle">
+            З ДИСЦИПЛІНИ
+            <span class="yellow-text">«WEB-ОРІЄНТОВНІ ТЕХНОЛОГІЇ. FRONTEND РОЗРОБКИ»</span>
+          </h2>
+          <div class="infobox">
+            <p class="info__name">
+              <span class="yellow-text">Студент: </span>
+              <a href="#" class="info__name-link">Богуславець Іван Євгенович</a>
+            </p>
+            <p class="info__group">
+              <span class="yellow-text">Група: </span>
+              ІО-35
+            </p>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+      <section class="lab-works">
+        <div class="container">
+          <ul class="lab-works__list">
+            <li class="lab-works__item active">
+              <a href="../lab1/lab-1.1.html" class="lab-works__link">Лабораторна робота №1</a>
+            </li>
+            <li class="lab-works__item">
+              <a href="../lab2/lab-2.1.html" class="lab-works__link">Лабораторна робота №2</a>
+            </li>
+            <li class="lab-works__item">
+              <a href="../lab3/lab-3.1.html" class="lab-works__link">Лабораторна робота №3</a>
+            </li>
+            <li class="lab-works__item">
+              <a href="../lab4/lab-4.1.html" class="lab-works__link">Лабораторна робота №4</a>
+            </li>
+            <li class="lab-works__item">
+              <a href="../lab5/lab-5.1.html" class="lab-works__link">Лабораторна робота №5</a>
+            </li>
+            <li class="lab-works__item">
+              <a href="../lab6/lab-6.1.html" class="lab-works__link">Лабораторна робота №6</a>
+            </li>
+            <li class="lab-works__item">
+              <a href="../lab7/lab-7.1.html" class="lab-works__link">Лабораторна робота №7</a>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="lab-description">
+        <div class="container">
+          <div class="lab-description__wrapper">
+            <aside class="lab-description__aside">
+              <ul class="lab-description__list">
+                <li class="lab-description__item">
+                  <a href="../lab1/lab-1.1.html" class="lab-description__link">Опис предметного середовища</a>
+                </li>
+                <li class="lab-description__item">
+                  <a href="../lab1/lab-1.2.html" class="lab-description__link">
+                    Тема, мета, місце розташування лабораторної роботи №1
+                  </a>
+                </li>
+                <li class="lab-description__item">
+                  <a href="../lab1/lab-1.3.html" class="lab-description__link">СТРУКТУРА ДОКУМЕНТА</a>
+                </li>
+                <li class="lab-description__item short">
+                  <a href="../lab1/lab-1.4.html" class="lab-description__link">HTML-код таблиць</a>
+                </li>
+                <li class="lab-description__item short active">
+                  <a href="../lab1/lab-1.5.html" class="lab-description__link">HTML-код форми</a>
+                </li>
+                <li class="lab-description__item short">
+                  <a href="../lab1/lab-1.6.html" class="lab-description__link">HTML-код зображення</a>
+                </li>
+                <li class="lab-description__item">
+                  <a href="../lab1/lab-1.7.html" class="lab-description__link">Висновки</a>
+                </li>
+              </ul>
+            </aside>
+
+            <div class="lab-description__text">
+              <p>
+                На сторінці «index.html» реалізовано дві форми:
+                форму пошуку/бронювання номера та форму зворотного зв’язку в блоці контактів.
+              </p>
+
+              <p><span>1. HTML-код форми пошуку/бронювання номера:</span></p>
+              <pre class="example">
+&lt;section id="booking"&gt;
+  &lt;h2&gt;Знайти номер&lt;/h2&gt;
+  &lt;form action="#" method="get"&gt;
+    &lt;label&gt;
+      Дата заїзду
+      &lt;input type="date" name="checkin" required&gt;
+    &lt;/label&gt;
+    &lt;label&gt;
+      Дата виїзду
+      &lt;input type="date" name="checkout" required&gt;
+    &lt;/label&gt;
+    &lt;label&gt;
+      Кількість гостей
+      &lt;input type="number" name="guests" min="1" step="1" value="2" required&gt;
+    &lt;/label&gt;
+    &lt;button type="submit"&gt;Пошук&lt;/button&gt;
+  &lt;/form&gt;
+&lt;/section&gt;
+</pre>
+
+              <p><span>2. HTML-код форми зворотного зв’язку у розділі «Контакти»:</span></p>
+              <pre class="example">
+&lt;section id="contacts"&gt;
+  &lt;h2&gt;Контакти&lt;/h2&gt;
+  &lt;address&gt;
+    вул. Прикладна, 10, Київ •
+    &lt;a href="tel:+380638384111"&gt;+38 (063) 838-41-11&lt;/a&gt; •
+    &lt;a href="mailto:info@hotelcomfort.ua"&gt;info@hotelcomfort.ua&lt;/a&gt;
+  &lt;/address&gt;
+
+  &lt;form action="#" method="post"&gt;
+    &lt;label&gt;Ім’я
+      &lt;input type="text" name="name" required&gt;
+    &lt;/label&gt;
+    &lt;label&gt;Email
+      &lt;input type="email" name="email" required&gt;
+    &lt;/label&gt;
+    &lt;label&gt;Повідомлення
+      &lt;textarea name="message" rows="4" required&gt;&lt;/textarea&gt;
+    &lt;/label&gt;
+    &lt;button type="submit"&gt;Надіслати&lt;/button&gt;
+  &lt;/form&gt;
+&lt;/section&gt;
+</pre>
+
+              <p><span>3. Вигляд форм у браузері:</span></p>
+              <img class="screenshot" src="../img/1.5.1.png" alt="Форма пошуку номера та форма зворотного зв’язку" />
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
