@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="../img/favicon.png" type="image/x-icon" />
+  <link rel="icon" href="../img/favicon.png" type="image/x-icon" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/normalize.css" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <title>Лабораторна робота №2</title>
+</head>
+<body>
+  <div class="wrapper">
+    <header>
+      <div class="container">
+        <div class="info">
+          <h2 class="info__place">НТУУ «КПІ ім. Ігоря Сікорського»</h2>
+          <a href="../index.html">
+            <h1 class="info__title">ЗВІТИ З ЛАБОРАТОРНИХ РОБІТ</h1>
+          </a>
+          <h2 class="info__subtitle">
+            З ДИСЦИПЛІНИ
+            <span class="yellow-text">«WEB-ОРІЄНТОВАНІ ТЕХНОЛОГІЇ. FRONTEND РОЗРОБКИ»</span>
+          </h2>
+          <div class="infobox">
+            <p class="info__name">
+              <span class="yellow-text">Студент: </span>
+              <a href="#" class="info__name-link">Богуславець Іван Євгенович</a>
+            </p>
+            <p class="info__group">
+              <span class="yellow-text">Група: </span>
+              ІО-35
+            </p>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+      <section class="lab-works">
+        <div class="container">
+          <ul class="lab-works__list">
+            <li class="lab-works__item">
+              <a href="../lab1/lab-1.1.html" class="lab-works__link">Лабораторна робота №1</a>
+            </li>
+            <li class="lab-works__item active">
+              <a href="../lab2/lab-2.1.html" class="lab-works__link">Лабораторна робота №2</a>
+            </li>
+            <li class="lab-works__item">
+              <a href="../lab3/lab-3.1.html" class="lab-works__link">Лабораторна робота №3</a>
+            </li>
+            <li class="lab-works__item">
+              <a href="../lab4/lab-4.1.html" class="lab-works__link">Лабораторна робота №4</a>
+            </li>
+            <li class="lab-works__item">
+              <a href="../lab5/lab-5.1.html" class="lab-works__link">Лабораторна робота №5</a>
+            </li>
+            <li class="lab-works__item">
+              <a href="../lab6-7/lab-6-7.1.html" class="lab-works__link">Лабораторна робота №6-7</a>
+            </li>
+            <li class="lab-works__item">
+              <a href="../lab8-9/lab-8-9.1.html" class="lab-works__link">Лабораторна робота №8-9</a>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="lab-description">
+        <div class="container">
+          <div class="lab-description__wrapper">
+            <aside class="lab-description__aside">
+              <ul class="lab-description__list">
+                <li class="lab-description__item">
+                  <a href="./lab-2.1.html" class="lab-description__link">
+                    Тема, мета ЛР №2. Місце розташування сайту, звіту
+                  </a>
+                </li>
+                <li class="lab-description__item">
+                  <a href="./lab-2.2.html" class="lab-description__link">Способи підключення стилів</a>
+                </li>
+                <li class="lab-description__item big">
+                  <a href="./lab-2.3.html" class="lab-description__link">СЕЛЕКТОРИ</a>
+                </li>
+                <li class="lab-description__item short">
+                  <a href="./lab-2.4.html" class="lab-description__link">Селектори тегу</a>
+                </li>
+                <li class="lab-description__item short">
+                  <a href="./lab-2.5.html" class="lab-description__link">Селектори класу</a>
+                </li>
+                <li class="lab-description__item short">
+                  <a href="./lab-2.6.html" class="lab-description__link">Селектори ідентифікаторів</a>
+                </li>
+                <li class="lab-description__item short">
+                  <a href="./lab-2.7.html" class="lab-description__link">Інші селектори</a>
+                </li>
+                <li class="lab-description__item active">
+                  <a href="./lab-2.8.html" class="lab-description__link">
+                    CSS: Шрифти, текст, таблиці, фон, контур, списки, CSS просунутий
+                  </a>
+                </li>
+              </ul>
+            </aside>
+
+            <div class="lab-description__text">
+              <p><span>1. Шрифти та текст</span></p>
+              <pre class="example">
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #1f2933;
+}
+
+.hero__title {
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.section-title {
+  font-size: 32px;
+  font-weight: 700;
+}
+              </pre>
+
+              <p><span>2. Фон сторінки та блоків</span></p>
+              <pre class="example">
+body {
+  background-color: #f5f7fb;
+}
+
+.hero {
+  background: linear-gradient(
+    180deg,
+    #1b2a41 0,
+    #1b2a41 58%,
+    #f5f7fb 58%,
+    #f5f7fb 100%
+  );
+}
+
+.btn--primary {
+  background-color: #e63946;
+}
+              </pre>
+
+              <p><span>3. Таблиці тарифів</span></p>
+              <pre class="example">
+.tariff-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 26px rgba(15, 23, 42, 0.08);
+}
+
+.tariff-table th,
+.tariff-table td {
+  padding: 10px 14px;
+  border-bottom: 1px solid #e1e7f0;
+}
+
+.tariff-table tbody tr:nth-child(even) {
+  background-color: #f9fbff;
+}
+              </pre>
+
+              <p><span>4. Оформлення списків</span></p>
+              <pre class="example">
+.list--check li::before {
+  content: "✔";
+  display: inline-block;
+  margin-right: 8px;
+  font-size: 13px;
+  color: #2b9348;
+}
+
+.list--steps {
+  padding-left: 18px;
+}
+
+.list--steps li {
+  list-style: decimal;
+}
+              </pre>
+
+              <p><span>5. «Просунутий» CSS (тіні, градієнти, flex, grid)</span></p>
+              <pre class="example">
+.logo__mark {
+  background: linear-gradient(135deg, #e63946, #ff9f1c);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.hero__inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  gap: 40px;
+}
+
+.booking__form {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.1);
+}
+
+.room-card {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
+}
+              </pre>
+
+              <p><span>6. Узагальнення використаних прийомів</span></p>
+              <p>
+                Під час розробки стилів для веб-застосунку «Hotel Comfort» були
+                використані різні можливості CSS: кастомні шрифти, градієнтні фони,
+                тіні для карток та кнопок, гнучкі сітки на базі flex та grid, а також
+                декоративні елементи для списків і таблиць. Це дозволило зробити
+                інтерфейс візуально цілісним, сучасним та зручним для користувача.
+              </p>
+
+              <p><span>7. Висновки по роботі №2:</span></p>
+              <p>
+                У ході виконання лабораторної роботи №2 я закріпив(ла) на практиці
+                роботу з різними типами селекторів CSS, ідентифікаторами, списками
+                та таблицями. На основі каскадних таблиць стилів було реалізовано
+                повноцінне візуальне оформлення веб-застосунку готелю «Hotel Comfort»,
+                включаючи шапку сайту, hero-блок, модуль бронювання, таблицю тарифів,
+                картки номерів та форму зворотного зв’язку. Отримані навички будуть
+                використані в наступних лабораторних роботах для додавання нових
+                сторінок та адаптивної верстки.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    function scrollToBottom() {
+      const currentScroll = window.scrollY;
+      window.scrollTo(0, document.body.scrollHeight);
+      setTimeout(() => {
+        if (window.scrollY !== currentScroll) {
+          window.scrollTo({
+            top: document.body.scrollHeight,
+            behavior: "smooth",
+          });
+        }
+      }, 100);
+    }
+    scrollToBottom();
+  </script>
+</body>
+</html>

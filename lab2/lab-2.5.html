@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="../img/favicon.png" type="image/x-icon" />
+  <link rel="icon" href="../img/favicon.png" type="image/x-icon" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/normalize.css" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <title>Лабораторна робота №2</title>
+</head>
+<body>
+  <div class="wrapper">
+    <header>
+      <div class="container">
+        <div class="info">
+          <h2 class="info__place">НТУУ «КПІ ім. Ігоря Сікорського»</h2>
+          <a href="../index.html">
+            <h1 class="info__title">ЗВІТИ З ЛАБОРАТОРНИХ РОБІТ</h1>
+          </a>
+          <h2 class="info__subtitle">
+            З ДИСЦИПЛІНИ
+            <span class="yellow-text">«WEB-ОРІЄНТОВАНІ ТЕХНОЛОГІЇ. FRONTEND РОЗРОБКИ»</span>
+          </h2>
+          <div class="infobox">
+            <p class="info__name">
+              <span class="yellow-text">Студент: </span>
+              <a href="#" class="info__name-link">Богуславець Іван Євгенович</a>
+            </p>
+            <p class="info__group">
+              <span class="yellow-text">Група: </span>
+              ІО-35
+            </p>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+      <section class="lab-works">
+        <div class="container">
+          <ul class="lab-works__list">
+            <li class="lab-works__item">
+              <a href="../lab1/lab-1.1.html" class="lab-works__link">Лабораторна робота №1</a>
+            </li>
+            <li class="lab-works__item active">
+              <a href="../lab2/lab-2.1.html" class="lab-works__link">Лабораторна робота №2</a>
+            </li>
+            <li class="lab-works__item">
+              <a href="../lab3/lab-3.1.html" class="lab-works__link">Лабораторна робота №3</a>
+            </li>
+            <li class="lab-works__item">
+              <a href="../lab4/lab-4.1.html" class="lab-works__link">Лабораторна робота №4</a>
+            </li>
+            <li class="lab-works__item">
+              <a href="../lab5/lab-5.1.html" class="lab-works__link">Лабораторна робота №5</a>
+            </li>
+            <li class="lab-works__item">
+              <a href="../lab6-7/lab-6-7.1.html" class="lab-works__link">Лабораторна робота №6-7</a>
+            </li>
+            <li class="lab-works__item">
+              <a href="../lab8-9/lab-8-9.1.html" class="lab-works__link">Лабораторна робота №8-9</a>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="lab-description">
+        <div class="container">
+          <div class="lab-description__wrapper">
+            <aside class="lab-description__aside">
+              <ul class="lab-description__list">
+                <li class="lab-description__item">
+                  <a href="./lab-2.1.html" class="lab-description__link">
+                    Тема, мета ЛР №2. Місце розташування сайту, звіту
+                  </a>
+                </li>
+                <li class="lab-description__item">
+                  <a href="./lab-2.2.html" class="lab-description__link">Способи підключення стилів</a>
+                </li>
+                <li class="lab-description__item big">
+                  <a href="./lab-2.3.html" class="lab-description__link">СЕЛЕКТОРИ</a>
+                </li>
+                <li class="lab-description__item short">
+                  <a href="./lab-2.4.html" class="lab-description__link">Селектори тегу</a>
+                </li>
+                <li class="lab-description__item short active">
+                  <a href="./lab-2.5.html" class="lab-description__link">Селектори класу</a>
+                </li>
+                <li class="lab-description__item short">
+                  <a href="./lab-2.6.html" class="lab-description__link">Селектори ідентифікаторів</a>
+                </li>
+                <li class="lab-description__item short">
+                  <a href="./lab-2.7.html" class="lab-description__link">Інші селектори</a>
+                </li>
+                <li class="lab-description__item">
+                  <a href="./lab-2.8.html" class="lab-description__link">
+                    CSS: Шрифти, текст, таблиці, фон, контур, списки, CSS просунутий
+                  </a>
+                </li>
+              </ul>
+            </aside>
+
+            <div class="lab-description__text">
+              <p><span>Застосування селектора класу у моєму веб-застосунку:</span></p>
+
+              <p><span>HTML-код елемента (карта номеру «Орія»):</span></p>
+              <pre class="example">
+&lt;article class="room-card"&gt;
+  &lt;img src="public/Oriya.png" alt="Номер Орія" class="room-card__image" /&gt;
+  &lt;div class="room-card__body"&gt;
+    &lt;h3 class="room-card__title"&gt;Орія&lt;/h3&gt;
+    &lt;p class="room-card__text"&gt;
+      Ідеальне місце для романтичного відпочинку або розслаблюючого вікенду.
+    &lt;/p&gt;
+    &lt;a href="#booking" class="btn btn--ghost"&gt;Вибрати номер&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/article&gt;
+              </pre>
+
+              <p><span>CSS-код елемента (селектори класів):</span></p>
+              <pre class="example">
+.room-card {
+  background-color: #ffffff;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
+  display: flex;
+  flex-direction: column;
+}
+
+.room-card__title {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.room-card__text {
+  font-size: 14px;
+  color: #52606d;
+}
+              </pre>
+
+              <p>
+                <span>Пояснення:</span> селектори класів дозволяють повторно
+                використовувати однакове оформлення для кількох карток номерів
+                («Орія», «Луна», «Аврора», «Верона»). Це зручно для підтримки
+                єдиного стилю та спрощує зміну дизайну.
+              </p>
+
+              <p><span>Вигляд елемента у браузері:</span></p>
+              <img src="../img/2.5.1.png" alt="Картки номерів на сторінці Hotel Comfort" class="screenshot">
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    function scrollToBottom() {
+      const currentScroll = window.scrollY;
+      window.scrollTo(0, document.body.scrollHeight);
+      setTimeout(() => {
+        if (window.scrollY !== currentScroll) {
+          window.scrollTo({
+            top: document.body.scrollHeight,
+            behavior: "smooth",
+          });
+        }
+      }, 100);
+    }
+    scrollToBottom();
+  </script>
+</body>
+</html>
