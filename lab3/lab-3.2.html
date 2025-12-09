@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="../img/favicon.png" type="image/x-icon" />
+  <link rel="icon" href="../img/favicon.png" type="image/x-icon" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/normalize.css" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <title>Лабораторна робота №3 — Адаптивна верстка</title>
+</head>
+<body>
+  <div class="wrapper">
+    <header>
+      <div class="container">
+        <div class="info">
+          <h2 class="info__place">НТУУ «КПІ ім. Ігоря Сікорського»</h2>
+          <a href="../index.html">
+            <h1 class="info__title">ЗВІТИ З ЛАБОРАТОРНИХ РОБІТ</h1>
+          </a>
+          <h2 class="info__subtitle">
+            З ДИСЦИПЛІНИ
+            <span class="yellow-text">«WEB-ОРІЄНТОВНІ ТЕХНОЛОГІЇ. FRONTEND РОЗРОБКИ»</span>
+          </h2>
+          <div class="infobox">
+            <p class="info__name">
+              <span class="yellow-text">Студент: </span>
+              <a href="#" class="info__name-link">Богуславець Іван Євгенович</a>
+            </p>
+            <p class="info__group">
+              <span class="yellow-text">Група: </span>
+              ІО-35
+            </p>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+      <!-- Навігація по лабораторних -->
+      <section class="lab-works">
+        <div class="container">
+          <ul class="lab-works__list">
+            <li class="lab-works__item">
+              <a href="../lab1/lab-1.1.html" class="lab-works__link">Лабораторна робота №1</a>
+            </li>
+            <li class="lab-works__item">
+              <a href="../lab2/lab-2.1.html" class="lab-works__link">Лабораторна робота №2</a>
+            </li>
+            <li class="lab-works__item active">
+              <a href="../lab3/lab-3.1.html" class="lab-works__link">Лабораторна робота №3</a>
+            </li>
+            <li class="lab-works__item">
+              <a href="../lab4/lab-4.1.html" class="lab-works__link">Лабораторна робота №4</a>
+            </li>
+            <li class="lab-works__item">
+              <a href="../lab5/lab-5.1.html" class="lab-works__link">Лабораторна робота №5</a>
+            </li>
+            <li class="lab-works__item">
+              <a href="../lab6/lab-6.1.html" class="lab-works__link">Лабораторна робота №6</a>
+            </li>
+            <li class="lab-works__item">
+              <a href="../lab7/lab-7.1.html" class="lab-works__link">Лабораторна робота №7</a>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="lab-description">
+        <div class="container">
+          <div class="lab-description__wrapper">
+            <!-- Ліве меню (зміст ЛР3) -->
+            <aside class="lab-description__aside">
+              <ul class="lab-description__list">
+                <li class="lab-description__item">
+                  <a href="../lab3/lab-3.1.html" class="lab-description__link">
+                    3.1: Тема, Мета, Місце розташування сайту, звіту
+                  </a>
+                </li>
+                <li class="lab-description__item short">
+                  <a href="../lab3/lab-3.1.html#styles" class="lab-description__link">
+                    Способи підключення стилів
+                  </a>
+                </li>
+                <li class="lab-description__item short">
+                  <a href="../lab3/lab-3.1.html#semantic" class="lab-description__link">
+                    Семантична структура сторінки
+                  </a>
+                </li>
+                <li class="lab-description__item short">
+                  <a href="../lab3/lab-3.1.html#results" class="lab-description__link">
+                    Результати роботи
+                  </a>
+                </li>
+
+                <li class="lab-description__item active">
+                  <a href="../lab3/lab-3.2.html" class="lab-description__link">
+                    3.2: Тема, Мета, Місце розташування сайту, звіту
+                  </a>
+                </li>
+                <li class="lab-description__item short">
+                  <a href="../lab3/lab-3.2.html#viewport" class="lab-description__link">
+                    Метатег viewport і базові брейкпоінти
+                  </a>
+                </li>
+                <li class="lab-description__item short">
+                  <a href="../lab3/lab-3.2.html#burger" class="lab-description__link">
+                    Адаптивне Бургер-меню
+                  </a>
+                </li>
+                <li class="lab-description__item short">
+                  <a href="../lab3/lab-3.2.html#mobile" class="lab-description__link">
+                    Адаптивність для мобільної версії сайту
+                  </a>
+                </li>
+                <li class="lab-description__item short">
+                  <a href="../lab3/lab-3.2.html#tests" class="lab-description__link">
+                    Тестування в інструментах розробника
+                  </a>
+                </li>
+                <li class="lab-description__item">
+                  <a href="../lab3/lab-3.2.html#conclusions" class="lab-description__link">
+                    Висновки
+                  </a>
+                </li>
+              </ul>
+            </aside>
+
+            <!-- Основний текст розділу 3.2 -->
+            <div class="lab-description__text">
+              <h2 class="description__text-topic">
+                Лабораторна робота №3. Адаптивна верстка веб-сторінки
+              </h2>
+
+              <p>
+                <span>Тема:</span>
+                «Адаптивна верстка. Використання медіа-запитів CSS3 для створення інтерфейсу,
+                що коректно працює на desktop, tablet та mobile-пристроях».
+              </p>
+
+              <p>
+                <span>Мета:</span>
+                навчитися адаптувати готовий макет головної сторінки «Hotel Comfort» під різні розміри екранів,
+                реалізувати адаптивне бургер-меню, гнучку сітку контенту й забезпечити відсутність
+                горизонтального скролу на мобільних пристроях.
+              </p>
+
+              <p id="viewport"><span>Метатег viewport і базові брейкпоінти:</span></p>
+              <p>
+                Для коректного масштабування сторінки на смартфонах використовується метатег
+                <code>viewport</code>. Усі стилі верстки розраховані на те, що ширина віртуального вікна
+                відповідає ширині екрана пристрою.
+              </p>
+
+              <pre class="example">
+&lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;
+              </pre>
+
+              <p>
+                Основні брейкпоінти у файлі <code>css/style.css</code>:
+              </p>
+              <ul>
+                <li><code>max-width: 900px</code> — перехід до мобільної компоновки (колонки в один стовпчик, бургер-меню);</li>
+                <li><code>max-width: 640px</code> — додаткова оптимізація форм, футера та сітки номерів.</li>
+              </ul>
+
+              <pre class="example">
+@media (max-width: 900px) {
+  .hero__inner,
+  .about-section__inner,
+  .contacts__inner,
+  .rooms__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    background: #1b2a41;
+  }
+
+  .booking__form {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .rooms__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+              </pre>
+
+              <p id="burger"><span>Адаптивне бургер-меню:</span></p>
+              <p>
+                На широких екранах навігація відображається як горизонтальний список посилань.
+                На екранах з шириною до 900px з’являється кнопка-бургер, а меню ховається під шапкою
+                і розкривається плавно вниз.
+              </p>
+
+              <p>Фрагмент HTML-коду шапки з бургер-кнопкою:</p>
+
+              <pre class="example">
+&lt;header class="header"&gt;
+  &lt;div class="container header__inner"&gt;
+    &lt;a href="index.html" class="logo"&gt;...&lt;/a&gt;
+
+    &lt;button class="burger" aria-label="Меню"&gt;
+      &lt;span class="burger__line"&gt;&lt;/span&gt;
+      &lt;span class="burger__line"&gt;&lt;/span&gt;
+      &lt;span class="burger__line"&gt;&lt;/span&gt;
+    &lt;/button&gt;
+
+    &lt;nav class="nav" id="main-nav" aria-label="Головна навігація"&gt;
+      &lt;ul class="nav__list"&gt;
+        &lt;li class="nav__item"&gt;&lt;a href="#hero" class="nav__link nav__link--current"&gt;Головна&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="nav__item"&gt;&lt;a href="#rooms" class="nav__link"&gt;Номери&lt;/a&gt;&lt;/li&gt;
+        ...
+      &lt;/ul&gt;
+    &lt;/nav&gt;
+
+    &lt;a class="header__phone" href="tel:+380638384111"&gt;+38 (063) 838-41-11&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/header&gt;
+              </pre>
+
+              <p>CSS-частина, що відповідає за перетворення меню на бургер-меню:</p>
+
+              <pre class="example">
+.burger {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5px;
+  width: 40px;
+  height: 32px;
+  border-radius: 999px;
+  border: 1px solid rgba(248, 250, 252, 0.4);
+  cursor: pointer;
+}
+
+.burger__line {
+  width: 18px;
+  height: 2px;
+  border-radius: 999px;
+  background-color: #e5e7eb;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+@media (max-width: 900px) {
+  .burger {
+    display: inline-flex;
+  }
+
+  .nav {
+    position: absolute;
+    inset-inline: 0;
+    top: 100%;
+    background-color: #111827;
+    padding: 12px 16px 16px;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(-8px);
+    pointer-events: none;
+    transition: max-height 0.25s ease, opacity 0.25s ease, transform 0.25s ease;
+  }
+
+  .header--menu-open .nav {
+    max-height: 400px;
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  .header--menu-open .burger__line:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+
+  .header--menu-open .burger__line:nth-child(2) {
+    opacity: 0;
+  }
+
+  .header--menu-open .burger__line:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+}
+              </pre>
+
+              <p>
+                Клас <code>header--menu-open</code> додається до елемента
+                <code>&lt;header&gt;</code> за допомогою простого JavaScript-коду при натисканні
+                на кнопку бургер-меню. Повторне натискання прибирає клас і приховує меню.
+              </p>
+
+              <p id="mobile"><span>Адаптивність для мобільної версії сайту:</span></p>
+              <p>
+                Для покращення читабельності та зручності взаємодії на смартфонах змінено
+                кількість колонок у сітках, відступи та розміри елементів. Основні зміни:
+              </p>
+              <ul>
+                <li>герой-секція переходить у колонку: текст і зображення розташовуються одне під одним;</li>
+                <li>форма пошуку номера переходить з чотирьох колонок у дві, а потім в одну колонку;</li>
+                <li>сітка номерів показує 4 картки в ряд на десктопі, 2 — на планшеті та 1 — на мобільних;</li>
+                <li>контакти і футер вирівнюються у стовпчик, елементи займають всю ширину екрана.</li>
+              </ul>
+
+              <pre class="example">
+@media (max-width: 640px) {
+  .booking__form {
+    grid-template-columns: 1fr;
+  }
+
+  .rooms__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contacts__inner {
+    grid-template-columns: 1fr;
+  }
+
+  .footer__inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+              </pre>
+
+              <p id="tests"><span>Тестування в інструментах розробника:</span></p>
+              <p>
+                Перевірка адаптивності виконувалася в режимі «Responsive Design» інструментів розробника
+                браузера. Послідовно змінювалася ширина вікна, емулювалися популярні пристрої
+                (iPhone / Android-смартфони / планшети). Було перевірено:
+              </p>
+              <ul>
+                <li>відкриття та закриття бургер-меню, відсутність горизонтального скролу;</li>
+                <li>перебудову hero-секції, форми пошуку та карток номерів;</li>
+                <li>читабельність тексту в блоці контактів та коректну роботу форми зворотного зв’язку;</li>
+                <li>стабільність макету при зміні орієнтації пристрою.</li>
+              </ul>
+
+              <p><span>Вигляд сайту на мобільних пристроях:</span></p>
+              <img
+                src="../img/3.2.1.png"
+                alt="Мобільна версія веб-застосунку Hotel Comfort з відкритим бургер-меню"
+                class="screenshot"
+              />
+
+              <p id="conclusions"><span>Висновки:</span></p>
+              <p>
+                У ході виконання лабораторної роботи №3 було реалізовано адаптивну верстку головної
+                сторінки веб-застосунку «Hotel Comfort». Використані медіа-запити, Flexbox та CSS-Grid
+                дозволили створити гнучкий макет, що коректно відображається на екранах різної ширини.
+              </p>
+              <p>
+                Окремо було розроблено та протестовано бургер-меню, яке замінює горизонтальну навігацію
+                на мобільних пристроях. У результаті інтерфейс сайту залишився зручним, читабельним
+                і логічно структурованим як на десктопах, так і на смартфонах та планшетах.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+</body>
+</html>
