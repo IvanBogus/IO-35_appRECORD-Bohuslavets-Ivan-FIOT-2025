@@ -21,6 +21,23 @@
       { href: "./lab-4.10.html", text: "ЗАВДАННЯ №9 (варіант 2 — Динамічне меню)" },
       { href: "./lab-4.11.html", text: "Висновки" },
     ],
+
+    "5": [
+      { href: "./lab-5.1.html", text: "Тема, мета ЛР №5. Місце розташування сайту, звіту" },
+
+      { href: "./lab-5.2.html", text: "Завдання №1 (варіант 2) — getProductDetails + callbacks" },
+      { href: "./lab-5.3.html", text: "Завдання №1 (варіант 4) — concerts (міста майбутніх концертів)" },
+      { href: "./lab-5.4.html", text: "Завдання №1 (варіант 6) — medicines (-30% якщо >300) + id" },
+      { href: "./lab-5.5.html", text: "Завдання №1 (варіант 8) — Storage (get/add/remove)" },
+      { href: "./lab-5.6.html", text: "Завдання №1 (варіант 10) — checkBrackets" },
+
+      { href: "./lab-5.7.html", text: "Завдання №2 (варіант 2) — some() (вік < 20)" },
+      { href: "./lab-5.8.html", text: "Завдання №2 (варіант 4) — map() (квадрати)" },
+      { href: "./lab-5.9.html", text: "Завдання №2 (варіант 6) — sort() (за віком)" },
+
+      { href: "./lab-5.10.html", text: "Висновки" },
+    ],
+
   };
 
   const items = menus[lab];

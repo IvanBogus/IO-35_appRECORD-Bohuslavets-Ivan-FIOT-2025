@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="../img/favicon.png" type="image/x-icon" />
+  <link rel="icon" href="../img/favicon.png" type="image/x-icon" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="../css/normalize.css" />
+  <link rel="stylesheet" href="../css/style.css" />
+
+  <title>Лабораторна робота №5</title>
+
+  <script src="../js/menu.js" defer></script>
+  <script src="../js/lab5.js" defer></script>
+</head>
+
+<body data-lab="5">
+  <div class="wrapper">
+    <header>
+      <div class="container">
+        <div class="info">
+          <h2 class="info__place">НТУУ «КПІ ім. Ігоря Сікорського»</h2>
+          <a href="../index.html">
+            <h1 class="info__title">ЗВІТИ З ЛАБОРАТОРНИХ РОБІТ</h1>
+          </a>
+          <h2 class="info__subtitle">
+            З ДИСЦИПЛІНИ
+            <span class="yellow-text">«WEB-ОРІЄНТОВАНІ ТЕХНОЛОГІЇ. FRONTEND РОЗРОБКИ»</span>
+          </h2>
+          <div class="infobox">
+            <p class="info__name">
+              <span class="yellow-text">Студент: </span>
+              <a href="#" class="info__name-link">Богуславець Іван Євгенович</a>
+            </p>
+            <p class="info__group">
+              <span class="yellow-text">Група: </span>
+              ІО-35
+            </p>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+      <section class="lab-works">
+        <div class="container">
+          <ul class="lab-works__list">
+            <li class="lab-works__item"><a href="../lab1/lab-1.1.html" class="lab-works__link">Лабораторна робота №1</a></li>
+            <li class="lab-works__item"><a href="../lab2/lab-2.1.html" class="lab-works__link">Лабораторна робота №2</a></li>
+            <li class="lab-works__item"><a href="../lab3/lab-3.1.html" class="lab-works__link">Лабораторна робота №3</a></li>
+            <li class="lab-works__item"><a href="../lab4/lab-4.1.html" class="lab-works__link">Лабораторна робота №4</a></li>
+            <li class="lab-works__item active"><a href="./lab-5.1.html" class="lab-works__link">Лабораторна робота №5</a></li>
+            <li class="lab-works__item"><a href="../lab6/lab-6.1.html" class="lab-works__link">Лабораторна робота №6</a></li>
+            <li class="lab-works__item"><a href="../lab7/lab-7.1.html" class="lab-works__link">Лабораторна робота №7</a></li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="lab-description">
+        <div class="container">
+          <div class="lab-description__wrapper">
+
+            <aside class="lab-description__aside" id="lab-menu"></aside>
+
+            <div class="lab-description__text">
+              <h2 class="description__text-topic">Лабораторна робота №5</h2>
+
+              <!-- ТУТ міняєш контент під сторінку -->
+              <h3 id="taskTitle">Завдання</h3>
+              <p id="taskText"></p>
+
+              <p><span>Перевірка:</span> результат дивись у <b>Console</b> (F12 → Console).</p>
+            </div>
+
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <!-- ТУТ міняєш виклик функції -->
+  <script>
+    window.addEventListener("DOMContentLoaded", () => {
+      const title = document.getElementById("taskTitle");
+      const text = document.getElementById("taskText");
+
+      title.textContent = "Завдання №2 (варіант 6) — sort() (сортування за віком)";
+      text.innerHTML = "<span>Текст завдання:</span> Відсортувати масив users за віком у порядку зростання.";
+
+
+      window.Lab5.task2v6();
+    });
+  </script>
+</body>
+</html>
