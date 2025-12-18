@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="../img/favicon.png" type="image/x-icon" />
+  <link rel="icon" href="../img/favicon.png" type="image/x-icon" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="../css/normalize.css" />
+  <link rel="stylesheet" href="../css/style.css" />
+
+  <title>ЛР7 — Завдання №3</title>
+  <script src="../js/menu.js" defer></script>
+</head>
+
+<body data-lab="7">
+  <div class="wrapper">
+    <header>
+      <div class="container">
+        <div class="info">
+          <h2 class="info__place">НТУУ «КПІ ім. Ігоря Сікорського»</h2>
+          <a href="../index.html"><h1 class="info__title">ЗВІТИ З ЛАБОРАТОРНИХ РОБІТ</h1></a>
+          <h2 class="info__subtitle">
+            З ДИСЦИПЛІНИ
+            <span class="yellow-text">«WEB-ОРІЄНТОВАНІ ТЕХНОЛОГІЇ. FRONTEND РОЗРОБКИ»</span>
+          </h2>
+          <div class="infobox">
+            <p class="info__name"><span class="yellow-text">Студент: </span><a href="#" class="info__name-link">Богуславець Іван Євгенович</a></p>
+            <p class="info__group"><span class="yellow-text">Група: </span>ІО-35</p>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+      <section class="lab-works">
+        <div class="container">
+          <ul class="lab-works__list">
+            <li class="lab-works__item"><a href="../lab1/lab-1.1.html" class="lab-works__link">Лабораторна робота №1</a></li>
+            <li class="lab-works__item"><a href="../lab2/lab-2.1.html" class="lab-works__link">Лабораторна робота №2</a></li>
+            <li class="lab-works__item"><a href="../lab3/lab-3.1.html" class="lab-works__link">Лабораторна робота №3</a></li>
+            <li class="lab-works__item"><a href="../lab4/lab-4.1.html" class="lab-works__link">Лабораторна робота №4</a></li>
+            <li class="lab-works__item"><a href="../lab5/lab-5.1.html" class="lab-works__link">Лабораторна робота №5</a></li>
+            <li class="lab-works__item"><a href="../lab6/lab-6.1.html" class="lab-works__link">Лабораторна робота №6</a></li>
+            <li class="lab-works__item active"><a href="./lab-7.1.html" class="lab-works__link">Лабораторна робота №7</a></li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="lab-description">
+        <div class="container">
+          <div class="lab-description__wrapper">
+            <aside class="lab-description__aside" id="lab-menu"></aside>
+
+            <div class="lab-description__text">
+              <h2 class="description__text-topic">ЗАВДАННЯ №3 — Таймер зворотного відліку</h2>
+
+              <p><span>Суть:</span> користувач обирає дату/час через <code>flatpickr</code>. Якщо дата в минулому — показується помилка через <code>iziToast</code>. При натисканні Start запускається відлік та оновлення полів щосекунди.</p>
+
+              <p><span>Фрагмент коду (валідація дати):</span></p>
+              <pre><code>flatpickr("#datetime-picker", {
+  enableTime: true,
+  time_24hr: true,
+  defaultDate: new Date(),
+  minuteIncrement: 1,
+  onClose(selectedDates) {
+    const selectedDate = selectedDates[0];
+
+    if (!selectedDate || selectedDate &lt;= new Date()) {
+      iziToast.error({
+        title: "Помилка",
+        message: "Please choose a date in the future",
+        position: "topRight"
+      });
+      startButtonElement.disabled = true;
+      return;
+    }
+
+    chosenDateTime = selectedDate;
+    startButtonElement.disabled = false;
+  }
+});</code></pre>
+
+              <p><span>Фрагмент коду (конвертація ms → дні/год/хв/сек):</span></p>
+              <pre><code>function parseMilliseconds(ms) {
+  const SECOND_MS = 1000;
+  const MINUTE_MS = SECOND_MS * 60;
+  const HOUR_MS = MINUTE_MS * 60;
+  const DAY_MS = HOUR_MS * 24;
+
+  const days = Math.floor(ms / DAY_MS);
+  const hours = Math.floor((ms % DAY_MS) / HOUR_MS);
+  const minutes = Math.floor(((ms % DAY_MS) % HOUR_MS) / MINUTE_MS);
+  const seconds = Math.floor((((ms % DAY_MS) % HOUR_MS) % MINUTE_MS) / SECOND_MS);
+
+  return { days, hours, minutes, seconds };
+}</code></pre>
+
+              <p><span>Перевірка:</span> вибери дату на 1–2 хв в майбутньому → Start → переконайся, що значення змінюються щосекунди.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

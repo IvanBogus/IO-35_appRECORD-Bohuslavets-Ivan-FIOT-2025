@@ -3,7 +3,7 @@
   const menuRoot = document.querySelector("#lab-menu");
   if (!menuRoot) return;
 
-  // Яке зараз ЛР? Очікуємо <body data-lab="4">
+  
   const lab = document.body.dataset.lab || "";
   if (!lab) return;
 
@@ -38,6 +38,25 @@
       { href: "./lab-5.10.html", text: "Висновки" },
     ],
 
+    "6": [
+      { href: "./lab-6.1.html", text: "Тема, мета ЛР №6. Місце розташування сайту, звіту" },
+      { href: "./lab-6.2.html", text: "ЗАВДАННЯ №2 — SWAP ME" },
+      { href: "./lab-6.3.html", text: "ЗАВДАННЯ №4 — Квадрат +/- 15px" },
+      { href: "./lab-6.4.html", text: "ЗАВДАННЯ №6 — Подвоєння значень списку" },
+      { href: "./lab-6.5.html", text: "ЗАВДАННЯ №8 — Форма логіна" },
+      { href: "./lab-6.6.html", text: "ЗАВДАННЯ №10 — Create/Destroy boxes" },
+      { href: "./lab-6.7.html", text: "Висновки" },
+    ],
+
+    "7": [
+      { href: "./lab-7.1.html", text: "Тема, мета ЛР №7. Місце розташування сайту, звіту" },
+      { href: "./lab-7.2.html", text: "ЗАВДАННЯ №1 — Кошик + пагінація" },
+      { href: "./lab-7.3.html", text: "ЗАВДАННЯ №2 — Галерея + форма (localStorage)" },
+      { href: "./lab-7.4.html", text: "ЗАВДАННЯ №3 — Таймер (flatpickr + iziToast)" },
+      { href: "./lab-7.5.html", text: "ЗАВДАННЯ №4 — Генератор промісів (iziToast)" },
+      { href: "./lab-7.6.html", text: "ЗАВДАННЯ №5 — Пошук зображень (Pixabay + SimpleLightbox)" },
+      { href: "./lab-7.7.html", text: "Висновки" },
+    ],
   };
 
   const items = menus[lab];
@@ -57,7 +76,6 @@
     a.href = item.href;
     a.textContent = item.text;
 
-    // active
     if (currentFile === item.href.replace("./", "")) {
       li.classList.add("active");
     }

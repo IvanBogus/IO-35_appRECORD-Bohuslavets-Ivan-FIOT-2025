@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="../img/favicon.png" type="image/x-icon" />
+  <link rel="icon" href="../img/favicon.png" type="image/x-icon" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="../css/normalize.css" />
+  <link rel="stylesheet" href="../css/style.css" />
+
+  <title>ЛР7 — Завдання №5</title>
+  <script src="../js/menu.js" defer></script>
+</head>
+
+<body data-lab="7">
+  <div class="wrapper">
+    <header>
+      <div class="container">
+        <div class="info">
+          <h2 class="info__place">НТУУ «КПІ ім. Ігоря Сікорського»</h2>
+          <a href="../index.html"><h1 class="info__title">ЗВІТИ З ЛАБОРАТОРНИХ РОБІТ</h1></a>
+          <h2 class="info__subtitle">
+            З ДИСЦИПЛІНИ
+            <span class="yellow-text">«WEB-ОРІЄНТОВАНІ ТЕХНОЛОГІЇ. FRONTEND РОЗРОБКИ»</span>
+          </h2>
+          <div class="infobox">
+            <p class="info__name"><span class="yellow-text">Студент: </span><a href="#" class="info__name-link">Богуславець Іван Євгенович</a></p>
+            <p class="info__group"><span class="yellow-text">Група: </span>ІО-35</p>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+      <section class="lab-works">
+        <div class="container">
+          <ul class="lab-works__list">
+            <li class="lab-works__item"><a href="../lab1/lab-1.1.html" class="lab-works__link">Лабораторна робота №1</a></li>
+            <li class="lab-works__item"><a href="../lab2/lab-2.1.html" class="lab-works__link">Лабораторна робота №2</a></li>
+            <li class="lab-works__item"><a href="../lab3/lab-3.1.html" class="lab-works__link">Лабораторна робота №3</a></li>
+            <li class="lab-works__item"><a href="../lab4/lab-4.1.html" class="lab-works__link">Лабораторна робота №4</a></li>
+            <li class="lab-works__item"><a href="../lab5/lab-5.1.html" class="lab-works__link">Лабораторна робота №5</a></li>
+            <li class="lab-works__item"><a href="../lab6/lab-6.1.html" class="lab-works__link">Лабораторна робота №6</a></li>
+            <li class="lab-works__item active"><a href="./lab-7.1.html" class="lab-works__link">Лабораторна робота №7</a></li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="lab-description">
+        <div class="container">
+          <div class="lab-description__wrapper">
+            <aside class="lab-description__aside" id="lab-menu"></aside>
+
+            <div class="lab-description__text">
+              <h2 class="description__text-topic">ЗАВДАННЯ №5 — Пошук зображень (Pixabay API + SimpleLightbox)</h2>
+
+              <p><span>Суть:</span> реалізовано сторінку пошуку зображень по ключовому слову. Під час запиту показується loader, результати відображаються картками, а перегляд великого зображення — через <code>SimpleLightbox</code>. Повідомлення/помилки — через <code>iziToast</code>.</p>
+
+              <p><span>Фрагмент коду запиту:</span></p>
+              <pre><code>const PIXABAY_API_KEY = "YOUR_PIXABAY_API_KEY";
+const API_BASE_URL = "https://pixabay.com/api/";
+
+function retrieveImages(query) {
+  const params = new URLSearchParams({
+    key: PIXABAY_API_KEY,
+    q: query,
+    image_type: "photo",
+    orientation: "horizontal",
+    safesearch: "true",
+    per_page: 40
+  });
+
+  return fetch(`${API_BASE_URL}?${params.toString()}`).then((response) =&gt; {
+    if (!response.ok) throw new Error(`HTTP error: ${response.status}`);
+    return response.json();
+  });
+}</code></pre>
+
+              <p><span>Фрагмент коду генерації розмітки:</span></p>
+              <pre><code>function generateGalleryMarkup(images) {
+  return images.map(({ webformatURL, largeImageURL, tags, likes, views, comments, downloads }) =&gt; `
+    &lt;li class="gallery__item"&gt;
+      &lt;a class="photo-card__thumb" href="${largeImageURL}"&gt;
+        &lt;img class="photo-card__image" src="${webformatURL}" alt="${tags}" loading="lazy" /&gt;
+      &lt;/a&gt;
+      &lt;div class="photo-card__info"&gt;...&lt;/div&gt;
+    &lt;/li&gt;
+  `).join("");
+}</code></pre>
+
+              <p><span>Перевірка:</span> введи запит (наприклад <code>cats</code>) → Search → має зʼявитись список карток, при кліку відкривається lightbox. Якщо запит порожній або результатів 0 — зʼявляється сповіщення.</p>
+
+              <p><span>Примітка:</span> для реальної роботи потрібен дійсний ключ Pixabay у змінній <code>PIXABAY_API_KEY</code>.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
